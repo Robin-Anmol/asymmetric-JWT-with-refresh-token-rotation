@@ -1,7 +1,5 @@
-import { Refresh } from '@prisma/client';
 import prisma from 'lib/prisma-client';
 import { UserWithRefresh } from '../interfaces';
-import { logger } from 'lib/logger';
 
 export class RefreshAccessTokenService {
   private readonly prisma = prisma;

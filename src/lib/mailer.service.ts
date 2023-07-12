@@ -17,7 +17,7 @@ export class MailService {
     });
   }
 
-  public async sendMail({ templateName, recipientEmail, subject, templateData, EventType }: sendMail) {
+  public async sendMail({ templateName, recipientEmail, subject, templateData }: sendMail) {
     try {
       const templatePath = path.resolve(__dirname, '..', 'templates', `${templateName}`, `${templateName}.ejs`);
 

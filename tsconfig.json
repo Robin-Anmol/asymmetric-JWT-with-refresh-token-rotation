@@ -23,6 +23,6 @@
     "importHelpers": true,
     "baseUrl": "./src"
   },
-  "include": ["src/**/*.ts", "src/**/*.json", "src/templates/**/*.ejs", ".env"],
+  "include": ["src/**/*.ts", "src/**/*.json", ".env"],
   "exclude": ["node_modules"]
 }

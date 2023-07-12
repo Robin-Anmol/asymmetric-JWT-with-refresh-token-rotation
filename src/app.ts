@@ -10,6 +10,7 @@ import { globalConstants } from './lib/constants';
 import { logger } from './lib/logger';
 import { errorMiddleware } from './middlewares/error.middleware';
 import http, { Server } from 'http';
+import { setupSwagger } from './utils';
 export class App {
   public app: express.Application;
   public port: number;
@@ -25,6 +26,7 @@ export class App {
     this.port = this.config.server.port;
     this.initializeMiddleware();
     this.initializeRoutes(routes);
+    this.initializeSwagger();
     this.initializeRouteFallback();
     this.initializeErrorHandling();
     this.disableSettings();
@@ -77,5 +79,9 @@ export class App {
 
   public getApp() {
     return this.app;
+  }
+
+  private initializeSwagger() {
+    setupSwagger(this.app);
   }
 }

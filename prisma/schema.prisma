@@ -20,7 +20,7 @@ model User {
   provider  Provider  @default(LOCAL)
   updatedAt DateTime  @updatedAt
   createdAt DateTime  @default(now())
-  Refresh   Refresh[]
+  refreshTokens   Refresh[]
 }
 
 enum Provider {
