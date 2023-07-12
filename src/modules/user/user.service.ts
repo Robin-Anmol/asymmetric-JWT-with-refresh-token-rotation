@@ -14,10 +14,6 @@ export class UserService {
       where: {
         userId,
       },
-      include: {
-        registeredRoom: true,
-        roomcreatedByme: true,
-      },
     });
     return { user };
   }

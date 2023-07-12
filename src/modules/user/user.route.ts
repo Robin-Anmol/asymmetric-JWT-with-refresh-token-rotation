@@ -15,6 +15,28 @@ export class UserRoute implements Route {
   }
 
   private initializeRoutes() {
+    /**
+     *  @openapi
+     *  '/user/me':
+     *  get:
+     *   tags:
+     *    - User
+     *   security:
+     *     - bearerAuth: []
+     *   summary: get logged in user
+     *   responses:
+     *     200:
+     *       description: Successfully logged out
+     *       $ref : '#/components/schemas/CreateUserResponse'
+     *     204:
+     *       description: Successfully logged out
+     *     400:
+     *       description: Bad request
+     *     401:
+     *       $ref : '#/components/responses/401'
+     *
+     */
+
     this.router.get(`${this.path}/me`, isAuthenticated, this.userController.getMyProfileHandler);
     this.router.put(
       `${this.path}/activate`,

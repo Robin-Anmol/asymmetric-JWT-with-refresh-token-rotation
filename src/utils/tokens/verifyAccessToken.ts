@@ -49,7 +49,7 @@ export async function verifyAccessToken(req: Request, res: Response<CustomRespon
       if ((err as Error).name !== 'TokenExpiredError') {
         throw new HttpExceptionError(globalConstants.statusCode.UnauthorizedException.code, 'Invalid  access token');
       }
-      throw new HttpExceptionError(globalConstants.statusCode.UnauthorizedException.code, 'token exipre');
+      throw new HttpExceptionError(globalConstants.statusCode.UnauthorizedException.code, 'Token exipred');
     }
   } catch (err) {
     return res.status(globalConstants.statusCode.UnauthorizedException.code).json({

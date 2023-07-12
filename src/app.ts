@@ -11,6 +11,7 @@ import { logger } from './lib/logger';
 import { errorMiddleware } from './middlewares/error.middleware';
 import http, { Server } from 'http';
 import { setupSwagger } from './utils';
+
 export class App {
   public app: express.Application;
   public port: number;

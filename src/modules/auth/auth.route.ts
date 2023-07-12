@@ -100,7 +100,7 @@ export class AuthRoute implements Route {
      *    - Authentication
      *   security:
      *     - bearerAuth: []
-     *   summary: this route generates a new access token
+     *   summary:  logout current user
      *   responses:
      *     204:
      *       description: Successfully logged out
